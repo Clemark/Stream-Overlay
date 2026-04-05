@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  --background: #1b1b1b7f;
 }
 
 html,
@@ -24,11 +26,12 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  background: linear-gradient(to left, #504f4f31, transparent);
+  background: linear-gradient(to left, var(--background), transparent);
   width: max-content;
   border-radius: 5px;
 }
 
 #time {
   color: #ffd900;
+  font-size: 1.5rem;
 }
