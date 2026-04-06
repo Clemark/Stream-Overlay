@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 
-  --background: #1b1b1b7f;
+  --background: #1b1b1baa;
+  --main: #ffd900;
 }
 
 html,
@@ -19,8 +20,8 @@ body {
 
 .wrapper {
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
   padding: 0.5rem 1rem;
   display: flex;
   flex-direction: column;
@@ -32,6 +33,6 @@ body {
 }
 
 #time {
-  color: #ffd900;
+  color: var(--main);
   font-size: 1.5rem;
 }

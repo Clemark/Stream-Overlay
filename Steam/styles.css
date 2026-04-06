@@ -1,0 +1,71 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  ---bg1: #1C2026;
+  ---bg2: #0E141B;
+  ---profile: #66C250;
+  ---username: #CBE3AE;
+  color: #8F8F90;
+  font-family: Open Sans, Arial, sans-serif;
+  font-size: 11px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+#steam-container {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  background-image: 
+    linear-gradient(#1C2026EE, #0E141B),
+    url("assets/logo.png"),
+    linear-gradient(#1C2026,#0E141B);
+  background-repeat: no-repeat;
+  background-position: center right, right 80%, center;
+  background-size: auto 200%;
+  width: 282px;
+  height: 70px;
+  display: flex;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  transform: translateY(100%);
+  transition: transform 0.2s ease-in-out;
+}
+
+#steam-container.active {
+  transform: translateY(0);
+}
+
+.profile-picture {
+  width: 44px;
+  height: 44px;
+  margin: 13px 10px;
+  border-right: #66C250 solid 3px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 13px 0
+}
+
+.username {
+  color: var(---username);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.category {
+  color: var(---profile);
+  font-weight: 500;
+}
+
+
+
