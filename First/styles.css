@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --background: #1b1b1baa;
+  --main: #ffd900;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Loos Normal";
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 2px var(--background);
+  text-transform: uppercase;
+}
+
+.wrapper {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, var(--background), transparent);
+  border-radius: 5px;
+  padding: 5px;
+  gap: 5px;
+}
+
+.profile {
+  height: 30px;
+  border-radius: 5px;
+}
+
+.first {
+  align-items: center;
+  justify-content: center;
+}
+
+span {
+  color: var(--main);
+}
