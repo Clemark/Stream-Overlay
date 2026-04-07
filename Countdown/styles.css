@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  --background: #1b1b1baa;
+  --main: #ffd900;
+}
+
+body {
+  font-weight: 400;
+  font-family: "Loos Normal", "BBH Hegarty", sans-serif;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  overflow: hidden;
+  height: 100vh;
+  text-shadow: 2px 2px 4px var(--background);
+}
+
+.intro {
+  text-align: center;
+  font-size: 5vw;
+  color: var(--main);
+  width: 100%;
+  justify-content: center;
+  margin-bottom: -23px;
+  letter-spacing: 0.05em;
+}
+
+.timer {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  font-size: 18vw; /* bigger responsive font */
+  color: white;
+  height: 1em;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 0.04em;
+  letter-spacing: -0.02em; /* tighter for BBH Hegarty */
+  width: 100%;
+  justify-content: center;
+}
+
+.scroll-wrap {
+  display: block;
+  height: 1em;
+  overflow: hidden;
+}
+
+.scroll-inner {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease-in-out;
+}
+
+.digit {
+  height: 1em;
+  line-height: 1em;
+  font-size: 1em;
+}

@@ -2,7 +2,7 @@
 // CONFIG
 ////////////////////
 const client = new StreamerbotClient();
-const sound = new Audio("audio/Steam.wav");
+const sound = new Audio("audio/Notification.wav");
 
 ////////////////////
 // FUNCTIONS
@@ -35,10 +35,10 @@ function steamOnline(username, pfpurl, gamecategory) {
 }
 
 function triggerSlide() {
+  sound.play();
+
   const element = document.getElementById("steam-container");
   element.classList.toggle("active");
-
-  sound.play();
 
   // hide after 3 seconds
   setTimeout(() => {
