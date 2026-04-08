@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --background: #1b1b1baa;
+  --main: #ffd900;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Loos Normal";
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  text-wrap: pretty;
+}
+
+.chat-instance {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  animation: floatupfade 10s ease-in-out;
+}
+
+@keyframes floatupfade {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateY(20px);
+  }
+  6% {
+    opacity: 1;
+    transform: scale(1.1) translateY(0);
+  }
+  12% {
+    transform: scale(0.95);
+  }
+  24% {
+    transform: scale(1.05);
+  }
+  32% {
+    transform: scale(0.98);
+  }
+  40% {
+    transform: scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  91% {
+    transform: scale(0.98);
+  }
+  93% {
+    transform: scale(1.05);
+  }
+  95% {
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) translateY(-20px);
+  }
+}
+
+.name {
+  padding: 0.7rem 2rem;
+  background: var(--main);
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 3px solid black;
+  text-transform: uppercase;
+  font-family: "Loos Wide";
+  font-weight: 700;
+  font-size: 0.8rem;
+  box-shadow: 5px 5px 0px black;
+
+  rotate: -5deg;
+  animation: floatupdown 2s ease infinite;
+}
+
+@keyframes floatupdown {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: translateY(5px) rotate(0deg);
+  }
+}
+
+.message {
+  padding: 1.7rem 2rem 1rem;
+  background: white;
+  width: fit-content;
+  max-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 3px solid black;
+  font-weight: 700;
+  margin-top: -1rem;
+  margin-left: 2rem;
+  box-shadow: 5px 5px 0px black;
+  rotate: -2deg;
+  z-index: -1;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}

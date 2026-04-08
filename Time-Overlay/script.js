@@ -14,36 +14,28 @@ function updateClock() {
   }
 
   const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
+    "January",
+    "February",
+    "March",
+    "April",
     "May",
-    "Jun",
-    "Ju;",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
 
   const month = months[now.getMonth()];
-  const date = String(now.getDate()).padStart(2, "0");
-  const days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  const date = String(now.getDate());
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const day = days[now.getDay()];
 
   let dateElement = document.getElementById("date");
   if (dateElement) {
-    dateElement.textContent = `${month} ${date}, ${day}`;
+    dateElement.textContent = `${month} ${date} ${day}`;
   }
 }
 
