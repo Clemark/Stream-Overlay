@@ -1,5 +1,5 @@
 // CONFIG
-const client = new StreamerbotClient();
+const client = initStreamerbotConnection();
 
 // FUNCTIONS
 

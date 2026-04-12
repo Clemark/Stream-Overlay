@@ -6,6 +6,7 @@
     <title>Steam Attendance by clemxnade</title>
 
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../components/status.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +15,9 @@
     />
   </head>
   <body>
+    <div id="connection-status" class="connection-status disconnected">
+      Connecting...
+    </div>
     <div class="steam-container" id="steam-container">
       <img
         class="profile-picture"
@@ -28,6 +32,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@streamerbot/client/dist/streamerbot-client.js"></script>
+    <script src="../components/streamerbot-connection.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

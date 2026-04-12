@@ -1,7 +1,7 @@
 ////////////////////
 // CONFIG
 ////////////////////
-const client = new StreamerbotClient();
+const client = initStreamerbotConnection();
 const sound = new Audio("audio/Notification.wav");
 
 ////////////////////

@@ -5,6 +5,7 @@
 
   --background: #1b1b1baa;
   --main: #ffd900;
+  --shadow: 3px 3px 0px black;
 }
 
 html,
@@ -21,16 +22,26 @@ p {
   text-wrap: pretty;
 }
 
-.chat-instance {
+body {
+}
+
+.chat-template {
   position: absolute;
-  bottom: 50px;
-  right: 50px;
-  width: 400px;
+  right: 100px;
+  bottom: 40px;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: floatupfade 10s forwards;
+}
+
+.chat {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  animation: floatupfade 10s ease-in-out;
+  width: fit-content;
 }
 
 @keyframes floatupfade {
@@ -73,26 +84,69 @@ p {
   }
 }
 
-.name {
-  padding: 0.7rem 2rem;
-  background: var(--main);
-  width: fit-content;
+.profpic {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  border: 3px solid black;
+  margin-top: 20px;
+  margin-right: -20px;
+  rotate: 5deg;
+  box-shadow: var(--shadow);
+  animation: floating 3s ease infinite;
+}
+
+.account {
   display: flex;
-  justify-content: center;
+  z-index: 1000;
+  width: 100%;
+  justify-content: flex-end;
   align-items: center;
+  gap: 5px;
+  padding-right: 10px;
+}
+
+.badge {
+  margin-top: 20px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  border: 3px solid black;
+  text-transform: uppercase;
+  font-family: "Loos Wide";
+  height: fit-content;
+  font-weight: 700;
+  font-size: 0.5rem;
+  background-color: #ffd900;
+}
+
+.sub {
+  margin-top: 20px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  border: 3px solid black;
+  text-transform: uppercase;
+  font-family: "Loos Wide";
+  height: fit-content;
+  font-weight: 700;
+  font-size: 0.5rem;
+  background-color: #ffd900;
+}
+
+.name {
+  padding: 0.25rem 0.75rem;
   border-radius: 5px;
   border: 3px solid black;
   text-transform: uppercase;
   font-family: "Loos Wide";
   font-weight: 700;
   font-size: 0.8rem;
-  box-shadow: 5px 5px 0px black;
+  box-shadow: var(--shadow);
+  margin-right: auto;
 
-  rotate: -5deg;
-  animation: floatupdown 2s ease infinite;
+  animation: floating 2s linear infinite;
 }
 
-@keyframes floatupdown {
+@keyframes floating {
   0% {
     transform: translateY(0px) rotate(0deg);
   }
@@ -105,21 +159,16 @@ p {
 }
 
 .message {
-  padding: 1.7rem 2rem 1rem;
+  padding: 1.5rem 1rem 0.5rem;
   background: white;
-  width: fit-content;
-  max-width: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 5px;
   border: 3px solid black;
   font-weight: 700;
+  min-width: 200px;
   margin-top: -1rem;
   margin-left: 2rem;
-  box-shadow: 5px 5px 0px black;
-  rotate: -2deg;
-  z-index: -1;
+  box-shadow: var(--shadow);
+  z-index: 1;
   text-wrap: pretty;
   overflow-wrap: break-word;
   hyphens: auto;

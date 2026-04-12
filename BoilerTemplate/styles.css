@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --clr-disconnected: #eb0707d7;
+  --clr-connected: #0ea322d7;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Loos Normal", "Golos Text", sans-serif;
+}
+
+/* INFO: Setting up connection status */
+
+.connection-status {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2ch;
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  color: white;
+  background: var(--clr-disconnected);
+  opacity: 1;
+
+  animation: float 1s ease-in-out infinite;
+  transition: opacity 1s ease 1s;
+}
+
+.connected {
+  background: var(--clr-connected);
+  opacity: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+/* INFO: Overlay Setup here */

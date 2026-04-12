@@ -3,18 +3,34 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Low Cortisol Chat</title>
 
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../components/status.css" />
+
+    <!-- StreamerBot Connection -->
+    <script src="https://cdn.jsdelivr.net/npm/@streamerbot/client/dist/streamerbot-client.js"></script>
+    <script src="../components/streamerbot-connection.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/@streamerbot/client/dist/streamerbot-client.js"></script>
-    <script src="script.js"></script>
+    <div class="connection-status" id="connection-status">Connecting...</div>
 
-    <template id="chat-template">
-      <div class="chat-instance">
-        <p class="name">username</p>
-        <p class="message">message</p>
+    <template id="chat-template" class="chat-template">
+      <img
+        class="profpic"
+        src="
+          https://static-cdn.jtvnw.net/jtv_user_pictures/0a437b3f-9976-41f7-b24c-c4275e4c8dc0-profile_image-70x70.png"
+        alt=""
+        srcset="
+        "
+      />
+      <div class="chat">
+        <div class="account">
+          <p class="name">username</p>
+          <p class="badge">mod</p>
+          <p class="sub">prime sub</p>
+        </div>
+        <div class="message">Lorem, ipsum dolor.</div>
       </div>
     </template>
   </body>

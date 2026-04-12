@@ -6,8 +6,10 @@
     <title>First Overlay</title>
 
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../components/status.css" />
   </head>
   <body>
+    <div id="connection-status" class="connection-status">Connecting...</div>
     <div class="wrapper">
       <img
         class="profile"
@@ -17,6 +19,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@streamerbot/client/dist/streamerbot-client.js"></script>
+    <script src="../components/streamerbot-connection.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
